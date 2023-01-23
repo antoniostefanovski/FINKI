@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 4 - Zadacha 2</title>
+    <link rel="stylesheet" href="jquery/jquery-ui.css">
+    <script src="jquery/jquery.js"></script>
+    <script src="jquery/jquery-ui.js"></script>
+    <script type="text/javascript">
+
+      $(document).ready(function () {
+        $("#datepicker").datepicker({
+          defaultDate: new Date(),
+          beforeShowDay: function(date) {
+            var disabled = true,
+                    numOfDays = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
+            if (numOfDays % 2 != 0) {
+              disabled = (date.getDate() % 2 == 0) //so for even days months, disable the odd days
+            } else {
+              disabled = (date.getDate() % 2 != 0) //so for odd days months, disable the even days
+            }
+            return [disabled, ""]
+          }
+        });
+      })
+
+    </script>
+</head>
+<body>
+
+<p>Date: <input type="text" id="datepicker"></p>
+
+</body>
+</html>
