@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="jquery/jquery-ui.css">
+    <script src="jquery/jquery.js"></script>
+    <script src="jquery/jquery-ui.js"></script>
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script type='text/javascript'>
+
+        $(document).ready(function () {
+            $("button").hide();
+            $(".title").hover(function () {
+                $(this).find("button").show();
+            }, function () {
+                $(this).find("button").hide();
+            })
+            $("#backHome").hover(function () {
+                $("a").addClass("sminka");
+            }, function () {
+                $("a").removeClass("sminka");
+            })
+        })
+    </script>
+    <style>
+        div {
+            text-align: center;
+        }
+        .title {
+            display: inline-block;
+            width: 300px;
+            height: 230px;
+            border: 1px solid black;
+            margin-bottom: 10px;
+            margin-right: 10px;
+            vertical-align: bottom;
+        }
+        div div p {
+            text-align: center;
+        }
+        span {
+            text-align: center;
+            font-weight: bold;
+            color: darkgray;
+            cursor: pointer;
+            padding: 5px;
+            border: 1px solid darkgray;
+            text-transform: uppercase;
+        }
+        .sminka {
+            color: #1c94c4;
+        }
+        a {
+            text-decoration: none;
+            color: darkgray;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div>
+        <span id="backHome"><a href="#">Home</a></span>
+        <h1>Cameras</h1>
+        <div class="title">
+            <p>Canon 1</p>
+            <img src="sl/prva.png" width="150px" height="150px"><br>
+            <section id="buttons">
+                <button>Add to cart</button>
+                <button>Rate</button>
+            </section>
+
+        </div>
+
+        <div class="title">
+            <p>Canon 2</p>
+            <img src="sl/vtora.jpg" width="150px" height="150px"><br>
+            <section id="buttons">
+                <button>Add to cart</button>
+                <button>Rate</button>
+            </section>
+        </div>
+
+        <div class="title">
+            <p>Canon 3</p>
+            <img src="sl/treta.png" width="150px" height="150px"><br>
+            <section id="buttons">
+                <button>Add to cart</button>
+                <button>Rate</button>
+            </section>
+        </div>
+
+
+    </div>
+
+    <div>
+        <div class="title">
+            <p>Canon 1</p>
+            <img src="sl/prva.png" width="150px" height="150px"><br>
+            <section id="buttons">
+                <button>Add to cart</button>
+                <button>Rate</button>
+            </section>
+
+        </div>
+
+        <div class="title">
+            <p>Canon 2</p>
+            <img src="sl/vtora.jpg" width="150px" height="150px"><br>
+            <section id="buttons">
+                <button>Add to cart</button>
+                <button>Rate</button>
+            </section>
+        </div>
+
+        <div class="title">
+            <p>Canon 3</p>
+            <img src="sl/treta.png" width="150px" height="150px"><br>
+            <section id="buttons">
+                <button>Add to cart</button>
+                <button>Rate</button>
+            </section>
+        </div>
+
+
+    </div>
+
+    <div>
+        <div class="title">
+            <p>Canon 1</p>
+            <img src="sl/prva.png" width="150px" height="150px"><br>
+            <section id="buttons">
+                <button>Add to cart</button>
+                <button>Rate</button>
+            </section>
+
+        </div>
+
+        <div class="title">
+            <p>Canon 2</p>
+            <img src="sl/vtora.jpg" width="150px" height="150px"><br>
+            <section id="buttons">
+                <button>Add to cart</button>
+                <button>Rate</button>
+            </section>
+        </div>
+
+        <div class="title">
+            <p>Canon 3</p>
+            <img src="sl/treta.png" width="150px" height="150px"><br>
+            <section id="buttons">
+                <button>Add to cart</button>
+                <button>Rate</button>
+            </section>
+        </div>
+
+
+    </div>
+
+
+</body>
+</html>
