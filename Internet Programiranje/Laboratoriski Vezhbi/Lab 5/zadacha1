@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<head>
+    <script>
+    </script>
+</head>
+<body>
+<h1>Калкулатор</h1>
+<div>
+    <div style="text-align:left; float:left">
+        <p>а <input id="a" style="width:15px"/>
+            b <input id="b" style="width:15px"/></p>
+        <p>
+            <input id="plus" type="radio" name="oper" checked>a+b
+            <input id="minus" type="radio" name="oper">a-b
+            <input id="mnoz" type="radio" name="oper" >a*b
+            <input id="del" type="radio" name="oper" >a/b
+            <br>
+            <input id="sin" type="radio" name="oper">sin(a)
+            <input id="cos" type="radio" name="oper">cos(a)
+            <input id="tg" type="radio" name="oper">tg(a)
+            <br>
+            <input id="cel" type="radio" name="oper">[a]
+            <input id="stepen" type="radio" name="oper">a<sup>b</sup>
+            <input id="koren" type="radio" name="oper">&radic;<span style="text-decoration:
+overline">a</span>
+        </p>
+        <button onclick="presmetaj()">Пресметај</button>
+        <p id="rezultat"></p>
+    </div>
+</div>
+<br/>
+
+<script>
+    function presmetaj(){
+        broj1 = document.getElementById('a').value;
+        broj2 = document.getElementById('b').value;
+
+        broj1 = parseInt(broj1);
+        broj2 = parseInt(broj2);
+
+        buttons = document.getElementsByName('oper');
+        var whatToDo;
+
+        for (i=0; i<buttons.length; i++){
+            if(buttons[i].checked) {
+                whatToDo = buttons[i].attributes[0].value;
+                break;
+            }
+        }
+
+        var printHere = document.getElementById('rezultat');
+        switch (whatToDo){
+            case 'plus':
+                printHere.innerHTML = broj1+broj2;
+                break;
+            case 'minus':
+                printHere.innerHTML = broj1-broj2;
+                break;
+            case 'mnoz':
+                printHere.innerHTML = broj1*broj2;
+                break;
+            case 'del':
+                printHere.innerHTML = broj1/broj2;
+                break;
+            case 'sin':
+                printHere.innerHTML = Math.sin(broj1);
+                break;
+            case 'cos':
+                printHere.innerHTML = Math.cos(broj1);
+                break;
+            case 'tg':
+                printHere.innerHTML = Math.tan(broj1);
+                break;
+            case 'cel':
+                printHere.innerHTML = Math.ceil(broj1);
+                break;
+            case 'stepen':
+                printHere.innerHTML = Math.pow(broj1,broj2);
+                break;
+            case 'koren':
+                printHere.innerHTML = Math.sqrt(broj1);
+                break;
+        }
+    }
+</script>
+
+</body>
+</html>
