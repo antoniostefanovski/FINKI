@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab1 - Zadacha 1</title>
+
+</head>
+<body>
+    <h1 id="isNumPalindrome"></h1>
+    <script type="text/javascript">
+
+        let result = document.getElementById("isNumPalindrome");
+        let a = prompt("Vnesete tricifren broj od tastatura");
+        let len = a.length;
+
+        if(!isNaN(parseInt(a))  && len === 3) {
+            let proverkaCifri = true;
+            for(let i=0; i<a.   length; i++) {
+                if(a.charAt(i) != a.charAt(a.length-i-1)) {
+                    proverkaCifri = false;
+                    break;
+                }
+            }
+            if(proverkaCifri) {
+                result.innerHTML = "Brojot e palindrom.";
+            }
+            else {
+                result.innerHTML = "Brojot ne e palindrom.";
+            }
+        }
+        else {
+            result.innerHTML = "Nepravilen vlez";
+        }
+
+
+    </script>
+</body>
+</html>
