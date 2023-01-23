@@ -1,0 +1,132 @@
+// Потребните слики може да ги најдите на самиот курс објавени од страна на ФИНКИ
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <style>
+    td{
+      width: 120px;
+      height: 120px;
+    }
+  </style>
+</head>
+<body>
+<h1>Meморија</h1>
+<div style="text-align:left; float:left">
+  <table border="1">
+    <tr>
+      <td id="m11"><img onclick="uncover(this)" src="creepy.png"/></td>
+      <td id="m12"><img onclick="uncover(this)" src=""/></td>
+      <td id="m13"><img onclick="uncover(this)" src=""/></td>
+      <td id="m14"><img onclick="uncover(this)" src=""/></td>
+    </tr>
+    <tr>
+      <td id="m21"><img onclick="uncover(this)" src=""/></td>
+      <td id="m22"><img onclick="uncover(this)" src=""/></td>
+      <td id="m23"><img onclick="uncover(this)" src=""/></td>
+      <td id="m24"><img onclick="uncover(this)" src=""/></td>
+      Интернет програмирање
+    </tr>
+    <tr>
+      <td id="m31"><img onclick="uncover(this)" src=""/></td>
+      <td id="m32"><img onclick="uncover(this)" src=""/></td>
+      <td id="m33"><img onclick="uncover(this)" src=""/></td>
+      <td id="m34"><img onclick="uncover(this)" src=""/></td>
+    </tr>
+    <tr>
+      <td id="m41"><img onclick="uncover(this)" src=""/></td>
+      <td id="m42"><img onclick="uncover(this)" src=""/></td>
+      <td id="m43"><img onclick="uncover(this)" src=""/></td>
+      <td id="m44"><img onclick="uncover(this)" src=""/></td>
+    </tr>
+  </table>
+  <button onclick="reset()"> RESET</button>
+</div>
+<br/>
+
+<script>
+  var pictures = ['creepy.png', "FB.jpg",'instagram.png', 'three.png', 'umbrella.png','university.jpg', 'whatsApp.png', 'windows.png'
+    ,'creepy.png', "FB.jpg",'instagram.png', 'three.png', 'umbrella.png','university.jpg', 'whatsApp.png', 'windows.png'];
+
+  var ids = ['m11', 'm12', 'm13','m14', 'm21','m22','m23', 'm24', 'm31', 'm32', 'm33', 'm34', 'm41', 'm42', 'm43', 'm44'];
+
+
+//start
+  function shuffle(){
+      for (let i = pictures.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        const temp = pictures[i];
+        pictures[i] = pictures[j];
+        pictures[j] = temp;
+      }
+
+      for (i=0; i<16; i++){
+        document.getElementById(ids[i])
+                .style
+                .backgroundImage = "url(default.png)";
+      }
+  }
+
+  window.onload = function (){
+    reset();
+  }
+
+  function reset(){
+    shuffle();
+    for (i=0; i<16; i++) {
+      document.querySelector(`td#${ids[i]} img`)
+              .src = pictures[i];
+
+      document.querySelector(`td#${ids[i]} img`)
+              .style
+              .opacity = "0";
+    }
+  }
+
+//the game
+  var count = 0,guessed = 0;
+  function uncover(element){
+    //if clicked before
+    if(window.getComputedStyle(element).opacity ==='1') {
+      console.log("OPENED")
+      return;
+    }
+      //if we have 2 opened cards
+      if(count===2){
+        count = 0;
+
+        var all = document.getElementsByTagName('img');
+        var opened = [];
+
+        for (i=0; i<all.length; i++){
+          if(all[i].style.opacity === "1")
+            opened.push(all[i]);
+        }
+        //check if they're the same if they are leave them opened
+        if(opened[0].attributes.src.value === opened[1].attributes.src.value){
+          opened[0].style.opacity = "0.9";
+          opened[1].style.opacity = "0.9";
+
+          guessed++;
+          //if we have guessed them all
+          if(guessed===8)
+            alert("POBEDIVTE!!!!!");
+          return;
+        }
+        //if they aren't the same close both of them
+        opened[0].style.opacity = "0";
+        opened[1].style.opacity = "0";
+
+        return;
+      }
+
+    //if not clicked before
+    element.style.opacity = "1";
+    count++;
+
+  }
+
+</script>
+
+</body>
