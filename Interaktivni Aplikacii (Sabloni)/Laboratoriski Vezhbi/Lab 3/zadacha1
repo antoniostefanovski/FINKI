@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 3 - Zadacha 1</title>
+    <link rel="stylesheet" href="jquery/jquery-ui.css">
+    <script src="jquery/jquery.js"></script>
+    <script src="jquery/jquery-ui.js"></script>
+  <script type="text/javascript">
+
+    let currSel = [];
+    let canSelect = true;
+    let gameOver = 0;
+
+    $(document).ready(function () {
+
+
+      $("p").hide();
+
+      $(".card").hover(function () {
+        if($(this).get(0).getAttribute("isAvailable") !== "false") {
+          $(this).css("background", "linear-gradient(#8bf74d, #d2f74d)");
+          $(this).css("color", "#1E5799");
+        }
+
+      }, function () {
+        if($(this).get(0).getAttribute("isAvailable") !== "false") {
+          $(this).css("background", "linear-gradient(#1E5799, #7db9e8)");
+          $(this).css("color", "white");
+        }
+
+      });
+
+      $("div div").click(function () {
+        if(!canSelect) return;
+        let paragraph = $(this).find("p")[0];
+        let parJQ = $(this).find("p");
+        parJQ.show();
+        let value = parJQ.html();
+        $(this).find("h1").hide();
+
+        if(parJQ.parent().get(0).getAttribute("isAvailable") === "false" || currSel.includes(paragraph.id)) return;
+
+        currSel.push(paragraph.id);
+
+        if(currSel.length !== 2) return;
+
+        let selected1 = $(`#${currSel[0]}`).html();
+        let selected2 = $(`#${currSel[1]}`).html();
+
+        if(selected1 === selected2) {
+
+          $(`#${currSel[0]}`).parent().css("background", "gray");
+          $(`#${currSel[0]}`).parent().attr("isAvailable", "false");
+
+          $(`#${currSel[1]}`).parent().css("background", "gray");
+          $(`#${currSel[1]}`).parent().attr("isAvailable", "false");
+          gameOver++;
+          currSel = [];
+
+        }
+        else {
+          canSelect = false;
+          setTimeout(() => {
+            $(`#${currSel[0]}`).hide();
+            $(`#${currSel[0]}`).parent().find("h1").show();
+
+            $(`#${currSel[1]}`).hide();
+            $(`#${currSel[1]}`).parent().find("h1").show();
+
+            currSel = [];
+            canSelect = true;
+          }, 700);
+
+        }
+        if(gameOver === 8) {
+          setTimeout(() => {
+            alert("You finished your game\nCongrats!!!!");
+            location.reload();
+          }, 300);
+
+        }
+      });
+
+    })
+
+  </script>
+  <style>
+
+    .cards {
+      width: 600px;
+      display: flex;
+      text-align: center;
+      margin: auto;
+    }
+    .card {
+      width: 90px;
+      height: 90px;
+      background: linear-gradient(#1E5799, #7db9e8);
+      margin: 10px;
+      text-align: center;
+      color: white;
+    }
+
+    .card {
+      border: 2px solid black;
+    }
+
+    .card:nth-child(2n) {
+      border: 2px solid red;!important;
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="cards">
+  <div class="card">
+    <p id="1">Carl Cox</p>
+    <h1>1</h1>
+  </div>
+  <div class="card">
+    <p id="2">Ice Cube</p>
+    <h1>2</h1>
+  </div>
+  <div class="card">
+    <p id="3">Snoop Dogg</p>
+    <h1>3</h1>
+  </div>
+  <div class="card">
+    <p id="4">Dr.Dre</p>
+    <h1>4</h1>
+  </div>
+</div>
+
+<div class="cards">
+  <div class="card">
+    <p id="5">Ice Cube</p>
+    <h1>5</h1>
+  </div>
+  <div class="card">
+    <p id="6">Dr.Dre</p>
+    <h1>6</h1>
+  </div>
+  <div class="card">
+    <p id="7">Carl Cox</p>
+    <h1>7</h1>
+  </div>
+  <div class="card">
+    <p id="8">Snoop Dogg</p>
+    <h1>8</h1>
+  </div>
+</div>
+
+<div class="cards">
+  <div class="card">
+    <p id="9">Snoop Dogg</p>
+    <h1>9</h1>
+  </div>
+  <div class="card">
+    <p id="10">Dr.Dre</p>
+    <h1>10</h1>
+  </div>
+  <div class="card">
+    <p id="11">Ice Cube</p>
+    <h1>11</h1>
+  </div>
+  <div class="card">
+    <p id="12">Carl Cox</p>
+    <h1>12</h1>
+  </div>
+</div>
+
+<div class="cards">
+  <div class="card">
+    <p id="13">Dr.Dre</p>
+    <h1>13</h1>
+  </div>
+  <div class="card">
+    <p id="14">Ice Cube</p>
+    <h1>14</h1>
+  </div>
+  <div class="card">
+    <p id="15">Carl Cox</p>
+    <h1>15</h1>
+  </div>
+  <div class="card">
+    <p id="16">Snoop Dogg</p>
+    <h1>16</h1>
+  </div>
+</div>
+
+</body>
+</html>
