@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 5 - Zadacha 1</title>
+    <link rel="stylesheet" href="jquery/jquery-ui.css">
+    <script src="jquery/jquery.js"></script>
+    <script src="jquery/jquery-ui.js"></script>
+    <style>
+        .slider {
+            margin: 10px;
+        }
+        #object {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            left: 50%;
+            top: 50%;
+            background: green;
+        }
+    </style>
+</head>
+<body>
+<div id="project-label">Select a movie:</div>
+<input id="project">
+<p id="project-description" style="width:200px;background:#eef; padding: 5px; border:1px gray dotted;"></p>
+</div>
+
+
+<script type="text/javascript">
+
+    $(function(){
+        var sampleMovies = [
+            {
+                value: "oblivion",
+                label: "Oblivion",
+                desc: "A veteran assigned to extract Earth's remaining resources begins to question what he knows about his mission and himself."
+            },
+            {
+                value: "enders-game",
+                label: "Ender's Game",
+                desc: "Young Ender Wiggin is recruited by the International Military to lead the fight against the Formics, a genocidal alien race which nearly annihilated the human race in a previous invasion."
+            },
+            {
+                value: "elysium",
+                label: "Elysium",
+                desc: "In the year 2154, the very wealthy live on a man-made space station while the rest of the population resides on a ruined Earth. A man takes on a mission that could bring equality to the polarized worlds."
+            }
+        ];
+
+        $("#project").autocomplete({
+            source: sampleMovies,
+            select: function(event, ui) {
+                $("#project-description").text(ui.item.desc);
+            }
+        });
+        $("#project").data("ui-autocomplete")._renderItem = function(ul, item) {
+            return $("<li>")
+                .append("<div class='uitest'>" + item.label + "<br>" + item.desc + "</div>")
+                .appendTo(ul);
+        };
+
+    });
+</script>
+</body>
+</html>
