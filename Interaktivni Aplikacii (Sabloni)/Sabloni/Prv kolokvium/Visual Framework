@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script type='text/javascript'>
+
+        $(document).ready(function () {
+            $("#content2, #content3").hide();
+            $("#tab2").click(function () {
+                $("#content1, #content3").hide();
+                $("#content2").show();
+            })
+            $("#tab3").click(function () {
+                $("#content1, #content2").hide();
+                $("#content3").show();
+            })
+            $("#tab1").click(function () {
+                $("#content2, #content3").hide();
+                $("#content1").show();
+            })
+        })
+    </script>
+    <style>
+        .yellow {
+            background: yellow;
+        }
+        .red {
+            background: red;
+            color: aliceblue;
+        }
+        .aqua {
+            background: aquamarine;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar">
+    <h2>Navigation bar</h2>
+    <button id="tab1">Tab 1</button>
+    <button id="tab2">Tab 2</button>
+    <button id="tab3">Tab 3</button>
+    </div>
+    <div id="content1" class="yellow">
+        <h2>Tab 1</h2>
+        <p>Tab 1 some text...</p>
+    </div>
+    <div id="content2" class="red">
+        <h2>Tab 2</h2>
+        <p>Tab 2 some text...</p>
+    </div>
+    <div id="content3" class="aqua">
+        <h2>Tab 3</h2>
+        <p>Tab 3 some text...</p>
+    </div>
+</body>
+</html>
