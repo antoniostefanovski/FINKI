@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vezhbi</title>
+    <link rel="stylesheet" href="jquery/jquery-ui.css">
+    <script src="jquery/jquery.js"></script>
+    <script src="jquery/jquery-ui.js"></script>
+    <script>
+        //https://cors-anywhere.herokuapp.com/https://api.shortboxed.com/comics/v1/release_date/DATUM
+        $(document).ready(function () {
+            $("#tabs").tabs();
+            function getDrivers(year) {
+                $.ajax({
+                    url: "http://ergast.com/api/f1/"+year+"/drivers.json",
+                    dataType: "json",
+                    success: function (data) {
+                        $.each(data.MRData.DriverTable.Drivers, function (i, item) {
+                            let name = item.givenName + " " + item.familyName;
+                            let dateOfBirth = item.dateOfBirth;
+                            let nationality = item.nationality;
+                            let hisLink = item.url;
+                            $("#"+year).append("<li title='"+nationality+"'><div><p>Name: "+name+"</p><div class='moreInfo'><p>Date of Birth: "+dateOfBirth+"</p><p>Nationality: "+nationality+"</p><p>More info: <a href='"+hisLink+"'>Bio</a></p></div></div></li>");
+                        })
+                    }
+                })
+            }
+            getDrivers(2021);
+            getDrivers(2022);
+            $("#2021, #2022").sortable({
+                connectWith: "#fav"
+            });
+            $("#fav").sortable({
+                connectWith: "#2021, #2022"
+            });
+            $(document).on("click", "#fav li", function () {
+                $(this).find(".moreInfo").slideToggle();
+            })
+        })
+    </script>
+    <style>
+        #tabs-1, #tabs-2, #favfav {
+            display: inline-block;
+            vertical-align: top;
+        }
+        .moreInfo {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div id="tabs">
+    <ul>
+        <li><a href="#tabs-1">Drivers 2021</a></li>
+        <li><a href="#tabs-2">Drivers 2022</a></li>
+    </ul>
+    <div id="tabs-1">
+        <label>Drivers from 2021</label>
+        <ul id="2021"></ul>
+    </div>
+    <div id="tabs-2">
+        <label>Drivers from 2022</label>
+        <ul id="2022"></ul>
+    </div>
+    <div id="favfav">
+        <ul id="fav">
+            <label>Favourites</label>
+        </ul>
+    </div>
+</div>
+
+
+</div>
+</body>
+</html>
+
+/*
+$("#tabs").tabs();
+$(document).tooltip({
+items: "#stud li, #studUvid li",
+content: function(){
+var el = $(this);
+var poeni = el.attr("title1");
+var indeks = el.attr("rel");
+return "Poeni: " + poeni + " Indeks: " + indeks;
+}
+});
+$("#toRight").click(function () {
+if($("#stud li input:checked").parent().attr("title1") > 50) {
+$("#stud li input:checked").parent().remove().appendTo("#studUvid");
+$('#studUvid li input:checked').attr("checked",false);
+}
+else {
+$('#stud li input:checked').attr("checked",false);
+alert('Избравте студент со помалку од 50 поени');
+}
+});
+$("#toLeft").click(function () {
+$("#studUvid li input:checked").parent().remove().appendTo("#stud");
+$('#stud li input:checked').attr("checked",false);
+})
+*/
