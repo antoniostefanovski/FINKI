@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 4 - Zadacha 2</title>
+    <script type="text/javascript">
+
+        let arrItem = [];
+
+        function showBox() {
+
+          let items = document.getElementById("items");
+          let boxType = document.getElementById("boxType");
+          let createBox = document.getElementById("createBox");
+
+          if(items.value === "" || boxType.value === "") return;
+
+          arrItem = items.value.split(",").map(i => i.trim());
+          console.log(arrItem);
+
+          for(let i=0; i<arrItem.length; i++) {
+              createBox.innerHTML += `<input type="${boxType.value.toLowerCase()}" name="itemi"/><label>${arrItem[i]}</label>`;
+          }
+          createBox.innerHTML += `<br>`;
+
+
+
+        }
+    </script>
+    <style>
+      label {
+        margin-right: 5px;
+      }
+      button {
+        margin-top: 20px;
+        margin-left: 50px;
+        display: block;
+      }
+    </style>
+</head>
+<body>
+<div>
+  <label>Items:</label>
+  <input type="text" id="items"/><br><br>
+
+  <label>Type:</label>
+  <select id="boxType">
+    <option></option>
+    <option>Radio</option>
+    <option>Checkbox</option>
+  </select>
+
+  <button onclick="showBox()">Прикажи</button>
+
+  <form id="createBox"></form>
+</div>
+</body>
+</html>
