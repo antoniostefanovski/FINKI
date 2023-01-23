@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script type='text/javascript'>
+
+        $(document).ready(function () {
+            $("span").hide();
+
+            $("div div").hover(function () {
+                $(this).find("span").show();
+                $(this).find("p").hide();
+            }, function () {
+                $(this).find("span").hide();
+                $(this).find("p").show();
+            });
+        })
+    </script>
+    <style>
+        div {
+            width: 100%;
+            text-align: center;
+        }
+        div div {
+            width: 150px;
+            height: 150px;
+            border: 1px solid black;
+            display: inline-block;
+            margin-bottom: 10px;
+            margin-right: 10px;
+            padding: 10px;
+            vertical-align: middle;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <h3>Grid of equals</h3>
+        <div>
+            <p>1</p>
+            <span>Tile 1</span>
+        </div>
+
+        <div>
+            <p>2</p>
+            <span>Tile 2</span>
+        </div>
+
+        <div>
+            <p>3</p>
+            <span>Tile 3</span>
+        </div>
+
+    </div>
+
+    <div>
+
+        <div>
+            <p>4</p>
+            <span>Tile 4</span>
+        </div>
+
+        <div>
+            <p>5</p>
+            <span>Tile 5</span>
+        </div>
+
+        <div>
+            <p>6</p>
+            <span>Tile 6</span>
+        </div>
+
+    </div>
+
+    <div>
+
+        <div>
+            <p>4</p>
+            <span>Tile 4</span>
+        </div>
+
+        <div>
+            <p>5</p>
+            <span>Tile 5</span>
+        </div>
+
+        <div>
+            <p>6</p>
+            <span>Tile 6</span>
+        </div>
+
+    </div>
+
+
+</body>
+</html>
