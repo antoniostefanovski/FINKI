@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 4 - Zadacha 3</title>
+    <script type="text/javascript">
+
+      function promeni() {
+        let divToChange = document.getElementById("divToChange");
+        let colorInput = document.getElementById("color");
+        let valueIndicator = document.getElementById("valueIndicator");
+
+        if(colorInput.checked) {
+          divToChange.style.background = valueIndicator.value;
+        }
+        else {
+          divToChange.style.backgroundImage = `url('${valueIndicator.value}')`;
+          divToChange.style.backgroundSize = `cover`;
+        }
+      }
+
+    </script>
+    <style>
+      div {
+        width: 800px;
+        margin: auto;
+        text-align: center;
+      }
+    </style>
+</head>
+<body>
+<div id="divToChange">
+  <h1>Промена на позадина</h1>
+  <input type="radio" id="color" name="colorImage"/><label>Color</label>
+  <input type="radio" id="image" name="colorImage"/><label>Image</label>
+  <br><br>
+  <label>Value:</label>
+  <input type="text" id="valueIndicator"/>
+
+  <br><br>
+  <button onclick="promeni()">Промени</button>
+</div>
+</body>
+</html>
