@@ -1,0 +1,47 @@
+#!/bin/bash
+ 
+if [ $# -ne 4 ]
+then
+        echo "Help: <destination> <source> <rangeMin> <rangeMax>"
+        exit 1
+fi
+ 
+#1 - destinacija
+#2 - izvor
+#3 - rangeMinimum
+#4 - rangeMaximum
+ 
+ 
+if [ ! -d "$1" ]
+then
+        mkdir -p "${1}"
+fi
+ 
+IFS=$'\n'
+ 
+lista=`ls -l "${2}" | grep -v total`
+ 
+averageSize=0
+ 
+for item in $lista
+do
+        itemSize=`echo $item | awk '{print $6;}'`
+        averageSize=`expr $averageSize + $itemSize`
+done
+ 
+itemsInList=`ls -l "${2}" | grep -v total | wc -l`
+ 
+averageSize=`expr $averageSize / $itemsInList`
+ 
+echo $averageSize
+ 
+for item in $lista
+do
+        itemSize=`echo $item | awk '{print $6;}'`
+        if [ "$itemSize" -gt "$3" -a "$itemSize" -lt "$4" -a "$itemSize" -gt "$averageSize" ]
+        then
+                file4Transfer=`echo $item | awk '{print $NF;}'`
+                mv "${2}/${file4Transfer}" "${1}/${file4Transfer}"
+                echo "Prefrlen file e  ${file4Transfer}"
+        fi
+done
