@@ -12,6 +12,7 @@ if [ -d "$3" ]
 then
         rm -r "${3}"
 else
+        echo "kreiraj"
         mkdir -p "${3}"
 fi
 
@@ -28,7 +29,6 @@ getFiles(){
         for item in $testiram
         do
                 den=`echo $item | awk '{print $8;}'`
-                echo $den
                 if [ "$den" -gt "$x" -a "$den" -lt "$y" ]
                 then
                         size=`echo $item | awk '{print $6;}'`
@@ -43,16 +43,19 @@ getFiles(){
                                          newfileName="211137_${howManyTimesEcho}${counter}.txt"
                                          cp "${filename}" "${destionation}/${newfileName}"
                                 else
-                                         cp "${filename}" "${destionation}/${newfileName}"
+                                         cp "${filename}" "${3}/${newfileName}"
                                 fi
                         fi
                 fi
+                done
 }
 
 findAllTxtFiles(){
         file=$1
         if [ -e "${destination}/${file}" ]
-        counter=`$counter + 1`
+        then
+                counter=`$counter + 1`
+        fi
 }
 
 getFiles $@
