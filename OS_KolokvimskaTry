@@ -1,0 +1,50 @@
+
+#!/bin/bash
+
+
+if [ $# -ne 3 ]
+then
+        echo "<denMinimum> <denMaximum> <destinacija>"
+        exit 1
+fi
+
+IFS=$'\n'
+
+x=$1
+y=$2
+destination=$3
+
+
+getFiles(){
+        testiram=`ls -l | grep .txt`
+        for item in $testiram
+        do
+                den=`echo $item | awk '{print $8;}'`
+                echo $den
+                if [ "$den" -gt "$x" -a "$den" -lt "$y" ]
+                then
+                        size=`echo $item | awk '{print $6;}'`
+                        if [ "$size" -gt 150 ]
+                        then
+                                filename=`echo $item | awk '{print $10;}'`
+                                howManyTimesEcho=`cat $filename | grep "echo" | wc -l`
+                                newfileName="211137_${howManyTimesEcho}.txt"
+                                findAllTxtFiles "${newfileName}"
+                                if [ "$counter" -gt 0 ]
+                                then
+                                         newfileName="211137_${howManyTimesEcho}${counter}.txt"
+                                         cp "${filename}" "${destionation}/${newfileName}"
+                                else
+                                         cp "${filename}" "${destionation}/${newfileName}"
+                                fi
+                        fi
+                fi
+}
+
+findAllTxtFiles(){
+        file=$1
+        if [ -e "${destination}/${file}" ]
+        counter=`$counter + 1`
+}
+
+getFiles $@
