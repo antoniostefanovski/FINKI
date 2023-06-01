@@ -8,6 +8,13 @@ then
         exit 1
 fi
 
+if [ -d "$3" ]
+then
+        rm -r "${3}"
+else
+        mkdir -p "${3}"
+fi
+
 IFS=$'\n'
 
 x=$1
