@@ -35,7 +35,7 @@ getFiles(){
                         if [ "$size" -gt 150 ]
                         then
                                 filename=`echo $item | awk '{print $10;}'`
-                                howManyTimesEcho=`cat $filename | grep "echo" | wc -l`
+                                howManyTimesEcho=`cat $filename | grep "echo" | wc -w`
                                 newfileName="211137_${howManyTimesEcho}.txt"
                                 findAllTxtFiles "${newfileName}"
                                 if [ "$counter" -gt 0 ]
