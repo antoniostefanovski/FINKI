@@ -1,0 +1,21 @@
+﻿@model AlbumMVC.Models.AddUserToRoleModel
+@{
+    ViewBag.Title = "AddUserToRole";
+}
+
+<h2>Add User To Role</h2>
+
+@using (Html.BeginForm("AddUserToRole","Account")){
+
+    <div class="form-group">
+        @Html.Label("Email")
+        @Html.TextBoxFor(e => e.Email, new { @class="form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.DropDownListFor(r => r.SelectedRole, new SelectList(Model.Roles), new { @class = "form-control" })
+    </div>
+
+    <button type="submit" class="btn btn-outline-dark">Add</button>
+
+}

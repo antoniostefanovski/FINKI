@@ -1,0 +1,44 @@
+﻿@model AlbumMVC.Models.Store
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Store</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
+@Html.ActionLink("Add Album", "AddNewAlbumToStore", new { id = Model.Id })
+
+<ul>
+    @foreach(var album in Model.Albums) { 
+        <li>
+            Album: <a href="/Albums/Details/@album.Id">@album.Name</a> | Artist: <a href="/Artists/Details/@album.Artist.Id">@album.Artist.Name</a> | @Html.ActionLink("Delete Album", "DeleteAlbum", new { storeId = Model.Id, albumId = album.Id })
+        </li>
+    }
+</ul>

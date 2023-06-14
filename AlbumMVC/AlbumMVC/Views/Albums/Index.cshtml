@@ -1,0 +1,98 @@
+﻿@model IEnumerable<AlbumMVC.Models.Album>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table" id="albumTable">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Artist.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Genre.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AlbumArtURL)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Artist.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Genre.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    <img src="@item.AlbumArtURL" style="max-width: 150px; max-height: 150px;" />
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                    <button data-album="@item.Id" class="btn btn-danger js-delete">Delete</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@section Scripts {
+
+    <script>
+
+        $(document).ready(function () {
+            var table = $("#albumTable").DataTable();
+
+            $("#albumTable .js-delete").on("click", function () {
+                var btn = $(this);
+
+                bootbox.confirm("Do you wanna delete this album?", function (result) {
+                    if (result) {
+                        $.ajax({
+                            url: "/api/AlbumsApi/" + btn.attr("data-album"),
+                            /*
+                            
+                            bez api bi bilo
+
+                            url: "Albums/DeleteCustom/" + btn.attr("data-album"),
+                            method: "GET",
+
+                            */
+                            method: "DELETE",
+                            success: function () {
+                                table.row(btn.parents("tr")).remove().draw();
+                            }
+                        });
+                    }
+                });
+            });
+        });
+
+    </script>
+
+}
