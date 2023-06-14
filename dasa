@@ -1,0 +1,515 @@
+[33mcommit 6a730368d2780a204f4ded4904997203b1f24ae6[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Thu Jun 15 00:18:37 2023 +0200
+
+    added AlbumMVC
+
+[33mcommit 0aa4dab58ce75d613c72e78183ab74553f75a39a[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Thu Jun 15 00:11:35 2023 +0200
+
+    Create READme.md
+
+[33mcommit 12ba009ce2194bf9f7e94b04c0ff493c29555f77[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jun 5 18:56:07 2023 +0200
+
+    Rename zadaca1.sh to zadacha1.sh
+
+[33mcommit 1f0981c25cf2b9eadea0b1942c20ee334c8b684e[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jun 5 18:55:51 2023 +0200
+
+    Rename ReadMEzadacha3 to ReadMEzadacha3.md
+
+[33mcommit b14a6fcf4fe9fca5237274d746af6c36fcb100f4[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jun 5 18:55:33 2023 +0200
+
+    Rename READmeKolokviumska.md to Operativni Sistemi/Praktichen/ReadMEzadacha3
+
+[33mcommit 0c0080da3084b7972c11d37bf8a0e563f4cfd27d[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jun 5 18:55:01 2023 +0200
+
+    Rename OS_KolokvimskaTry to Operativni Sistemi/Praktichen/zadacha3.sh
+
+[33mcommit d991aca93d14df9e8fe6fa29b785be58d2655b4b[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jun 5 18:54:26 2023 +0200
+
+    Rename OS to Operativni Sistemi/Praktichen/zadacha2.sh
+
+[33mcommit 64184e1a563b14481e9a4f5bdb70b520800fe5b5[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jun 5 18:53:58 2023 +0200
+
+    Create zadaca1.sh
+
+[33mcommit a70c4d4a931664964244ee1af0f6170f50e46e03[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Fri Jun 2 12:48:56 2023 +0200
+
+    Update OS_KolokvimskaTry
+
+[33mcommit 958de5737af21a62492ca68811352092515eaecc[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Fri Jun 2 12:45:44 2023 +0200
+
+    Update OS_KolokvimskaTry
+
+[33mcommit dca132c10f1196f9a88402b0457e8e7f6724af21[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Thu Jun 1 22:22:25 2023 +0200
+
+    Update OS_KolokvimskaTry
+
+[33mcommit 8be4c3d1aec07f28a53a4015c26370f1deaf22a7[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Thu Jun 1 22:03:00 2023 +0200
+
+    Update OS_KolokvimskaTry
+
+[33mcommit dc83dc1b18504d6000b73861f7aaa44967c8c101[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Thu Jun 1 22:00:52 2023 +0200
+
+    Update OS_KolokvimskaTry
+
+[33mcommit d2e49ed48d2446936f8804976738518216210cff[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Thu Jun 1 21:53:26 2023 +0200
+
+    Update READmeKolokviumska.md
+
+[33mcommit 94517da64d501d89163e7dc233b3b4b2296996b4[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Thu Jun 1 21:50:34 2023 +0200
+
+    Create READmeKolokviumska.md
+
+[33mcommit bc825db90c02db836bb46900df9a348923746bfb[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Thu Jun 1 21:41:44 2023 +0200
+
+    Update OS_KolokvimskaTry
+
+[33mcommit 22dc82efb0a6c68829cfb1d6d55bc0965ccf81e0[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Thu Jun 1 21:37:03 2023 +0200
+
+    Create OS_KolokvimskaTry
+
+[33mcommit 88cf24b852d254b8c9c68c7c81209704a5b5f261[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Wed May 31 17:22:02 2023 +0200
+
+    Delete Operativni Sistemi/Vezbi (Skripti) directory
+
+[33mcommit 27725505221fae27bb9d9afe50f05c21c6d64eca[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Wed May 31 17:21:43 2023 +0200
+
+    Rename Lab4_Modifikacija to Lab4 Modifikacija 1
+
+[33mcommit bb7b76cda4ed3b7a9c179ba7c3eb061af0db4527[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Wed May 31 17:21:28 2023 +0200
+
+    Update README.md
+
+[33mcommit 3f62a82a641476d170e5ba5d12f0cbff69ed5ace[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Wed May 31 17:20:51 2023 +0200
+
+    Create README.md
+
+[33mcommit dfc8d7ad428062d1c9fc80d506fe94019a3721f7[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Wed May 31 17:20:17 2023 +0200
+
+    Create Lab4_Modifikacija
+
+[33mcommit 90eacd5b9dd79d0e4f1698549de3d03dd4f3e635[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon May 29 20:34:29 2023 +0200
+
+    OS_Lab4
+
+[33mcommit bea3c839c19a3d66704ecda8c47c0123ec15853b[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 20:11:56 2023 +0100
+
+    desc
+
+[33mcommit 11436c1ce3b8f951e42f58834d42b19f44b76f56[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 20:11:31 2023 +0100
+
+    zadacha
+
+[33mcommit c5453c0645d655ea289a89ab11dc07e2c0eb2fcd[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 20:09:33 2023 +0100
+
+    Drivers(2017 - JSON)
+
+[33mcommit bd337a7afe9dffa91d94cef7aea05d17c98a8aa8[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 20:08:59 2023 +0100
+
+    Drivers(JSON)
+
+[33mcommit e39946e1e38c919095b2aec33d799dc49622fe9e[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 20:07:39 2023 +0100
+
+    ...
+
+[33mcommit 03a660f94fbc1e40e9de6a948255bfc02d3e4a7d[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 20:07:19 2023 +0100
+
+    zadacha1
+
+[33mcommit de31fefdc94d065b4149a43097b2511cf4306bd0[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 20:06:53 2023 +0100
+
+    zadacha2
+
+[33mcommit eabed49835753501532d7ab676a8e7e157cb8999[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 20:06:34 2023 +0100
+
+    zadacha1
+
+[33mcommit 90ce21ee285e55882096f6e7d196538f6ebd146e[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 20:06:12 2023 +0100
+
+    zadacha3
+
+[33mcommit 8a50ca9d87e52021e9142bc442bad9d2c5186a3a[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 20:05:57 2023 +0100
+
+    zadacha2
+
+[33mcommit 8b9894f0b21b95eb981744f0aaa5cfdd43f06aad[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 20:05:41 2023 +0100
+
+    zadacha1
+
+[33mcommit 8bb5a54c6e483a160724326d35de0a1d14837be3[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 20:05:18 2023 +0100
+
+    zadacha3
+
+[33mcommit 31815ea15272a822dd975b8d52f8bb586b2d995f[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 20:05:02 2023 +0100
+
+    zadacha2
+
+[33mcommit 8905860457622ef59b6f9e775dd8d6f938fc27a8[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 20:04:44 2023 +0100
+
+    zadacha1
+
+[33mcommit f53544b134ae1144502418841fb34fe58a462256[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 20:04:21 2023 +0100
+
+    zadacha2
+
+[33mcommit c25b1043eab9132225566fdb9886c1baff9a7d29[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 20:04:01 2023 +0100
+
+    zadacha1
+
+[33mcommit ce33e03c49dd7dc2e2645b83a7442c968432d036[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 20:03:21 2023 +0100
+
+    zadacha3
+
+[33mcommit 2932827db1947ca86cb7a4fc0ae2bfad8b84d03e[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 20:03:05 2023 +0100
+
+    zadacha2
+
+[33mcommit f9e37cc54e83bc0dafb2927f5ea674b1ef4089c0[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 20:02:49 2023 +0100
+
+    zadacha1
+
+[33mcommit 683d10074d3fc70ceaba9fbce3fe1e359e3c3af1[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 20:02:21 2023 +0100
+
+    zadacha5
+
+[33mcommit ca623e0d95f0318988d3f4c748ad151b35e8c9a4[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 20:02:01 2023 +0100
+
+    zadacha4
+
+[33mcommit c7343cf3389c41331600d067595f378dfd81f458[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 20:01:41 2023 +0100
+
+    zadacha3
+
+[33mcommit 0874f1d560caa6d073bf6d2565dba53d4f5154af[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 20:01:04 2023 +0100
+
+    zadacha2
+
+[33mcommit 3fc79162bfa0f4d755b89d23fcc68fb31288e4d9[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 20:00:42 2023 +0100
+
+    zadacha1
+
+[33mcommit 17b9bd4481871f80bf20faa4c0afcfe9ea1a20d2[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 19:59:53 2023 +0100
+
+    Create README.md
+
+[33mcommit 88f95b3e92c5e8ccb09a2fc6c60f617b7ba8167d[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 19:57:03 2023 +0100
+
+    ListBuilder | Sortable List | Tooltip | Placeholder
+
+[33mcommit ce429e19ba000ea39060f3612381670eec7a5a32[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 19:54:09 2023 +0100
+
+    ajax_jsonRequest
+
+[33mcommit 1defb46d047c9710ec58d9c16806cdd498266315[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 19:52:31 2023 +0100
+
+    visualframework
+
+[33mcommit 925fa23202f231d3c9cb6f3fab4fea9e2b0a28b4[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 19:52:01 2023 +0100
+
+    titledsection
+
+[33mcommit 2e3300691b812a4012fb9fd6b4236648acdae28b[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 19:51:33 2023 +0100
+
+    pyramid
+
+[33mcommit 4d622955e0461ffdb3721d71895f7bdb32c01f25[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 19:51:05 2023 +0100
+
+    hovertool
+
+[33mcommit fbb8972716505d6b5e5d7b79d68e161a1ee8580e[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 19:50:22 2023 +0100
+
+    gridofequals
+
+[33mcommit 75426617ff15ed0a28607fe20bddc9367b197766[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 19:49:47 2023 +0100
+
+    collapsiblepanels
+
+[33mcommit 74512a18a247cfa57121d6795426024259510849[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 19:49:07 2023 +0100
+
+    accordion
+
+[33mcommit 9709d09168b44c1deb7da865743e3b724ce834a1[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 19:42:24 2023 +0100
+
+    description
+
+[33mcommit 69ca79b2c1b4791957248c0508eb5bedbbb628b3[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 19:41:55 2023 +0100
+
+    userCards_code
+
+[33mcommit 0fbc5e887fc4f666b98a9bbfe3ac79f3878b44ed[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 19:38:31 2023 +0100
+
+    description
+
+[33mcommit 702edb82d1492ba790aef2541867200a2bb19008[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 19:38:08 2023 +0100
+
+    registerFlight_code
+
+[33mcommit bdf2d7ae8a4674c412b364f1de22242eaec74098[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 19:35:24 2023 +0100
+
+    description
+
+[33mcommit b8948032d315df1bdfdbbec20728e6378f4b77a4[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 19:34:47 2023 +0100
+
+    numbermanipulation_code
+
+[33mcommit 344cc927a6f64e26618f68f288dff132c932fc3a[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 19:32:28 2023 +0100
+
+    description
+
+[33mcommit be4f238c5c01ad9107b85121108e7ad36db95151[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 19:32:00 2023 +0100
+
+    studentsGrade_code
+
+[33mcommit 759107d4bbd8b4308c2b80423aa1e7766f223129[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 19:29:47 2023 +0100
+
+    Update README.md
+
+[33mcommit 70f0460f3698438a6e89a78ab68dc70e4d00399f[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 19:28:13 2023 +0100
+
+    description
+
+[33mcommit df6cdfdb1907f3a2e4af8ba06bfcb18bfc368546[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 19:27:49 2023 +0100
+
+    registarskiTablici_code
+
+[33mcommit b5481d2cb3c87945afc38880857074c80c39fac7[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 19:24:57 2023 +0100
+
+    description
+
+[33mcommit 72bd77a32c07269651f8e7983016a5438307860c[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 19:24:22 2023 +0100
+
+    materijali
+
+[33mcommit c2312b85fe53b8cdbfbf6e03233727e81f2603e2[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 19:23:53 2023 +0100
+
+    snegulki_code
+
+[33mcommit 956ade2e15ccf5f2aa59bc066029fa3e2165e19c[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 19:23:03 2023 +0100
+
+    description
+
+[33mcommit 5e8425479c948f4b7bf8923a3838a2d4bf4fd38d[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 19:22:33 2023 +0100
+
+    addDeleteText_code
+
+[33mcommit 0b2fd40ac3a363a07ab353f9bb435cf57e6e1d05[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 19:20:37 2023 +0100
+
+    description
+
+[33mcommit 115d8ef0e55d3da12b161588b061d659353ed60b[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 19:19:52 2023 +0100
+
+    colorDelimeter_code
+
+[33mcommit e280c19281dc16ba9f77d051691201297cbc57cf[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 19:18:27 2023 +0100
+
+    RandomBoi_code
+
+[33mcommit e6962c41bb0e7ac32c5e1aad7e332d6b9663279d[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 19:18:13 2023 +0100
+
+    description
+
+[33mcommit f9257461960583f0a8fc69473e746ead73f660f2[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 19:18:01 2023 +0100
+
+    Delete RandomBoi.png
+
+[33mcommit b5e937450f9bf258d354b2870e5dee03d639aed4[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 19:17:27 2023 +0100
+
+    description
+
+[33mcommit 3d7dc08e223d7f048bc391953e9181408e5fa1c0[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 19:16:44 2023 +0100
+
+    pogoduvanjePresmetka_code
+
+[33mcommit 829f7a3dfb4c244b13b1fbbef4eea01833b0cf23[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 19:14:51 2023 +0100
+
+    description
+
+[33mcommit f9973f533e388dc8c75f14522550f1a3912c61a0[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 19:14:09 2023 +0100
+
+    kreiranjeDiv_code
+
+[33mcommit b2ec11cf2598b5db4ffe5f4dd2eef60fbc03e5f5[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 19:12:48 2023 +0100
+
+    description
+
+[33mcommit ccfd0cb010b710033a7bf7ece3d81f294634e4ea[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 19:09:29 2023 +0100
+
+    divAnimation_code
+
+[33mcommit 7373129a370dd4702a175042dbee04056acc164a[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 19:07:58 2023 +0100
+
+    description
+
+[33mcommit 3efda586ecc2dc18b74f17984445bf3a535642fe[m
+Author: Antonio <92383587+antoniostefanovski@users.noreply.github.com>
+Date:   Mon Jan 23 19:07:13 2023 +0100
+
+    paragraphStyling_code
