@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vezhbi</title>
+    <link rel="stylesheet" href="jquery/jquery-ui.css">
+    <script src="jquery/jquery.js"></script>
+    <script src="jquery/jquery-ui.js"></script>
+    <script>
+      $(document).ready(function (){
+          $("#tooltip").tooltip();
+          $("#datePicker").datepicker();
+          let avTags = ["Action", "Romance", "Sci-Fi", "Comedy", "Drama", "Thriller", "Documentary"];
+          $("#tags").autocomplete({
+            source: avTags,
+          });
+          $("#sourceList").selectable();
+          $("#destinationList").selectable();
+          $("#del").click(function () {
+            $(".ui-selected").detach();
+          });
+          $("#toRight").click(function () {
+            $("#sourceList").find(".ui-selected").appendTo("#destinationList").removeClass("ui-selected");
+          });
+          $("#toLeft").click(function () {
+          $("#destinationList").find(".ui-selected").appendTo("#sourceList").removeClass("ui-selected");
+          });
+          $("#source").sortable({
+            connectWith: "#dest",
+          });
+          $("#dest").sortable({
+            connectWith: "#source"
+          });
+      })
+    </script>
+    <style>
+      #sourceList, #destinationList, #source, #dest  {
+        display: inline-block;
+        vertical-align: top;
+        list-style-type: none;
+      }
+      #sourceList li, #destinationList li, #source li, #dest li {
+        width: 200px;
+        padding: 5px;
+        margin-bottom: 2px;
+        border: 1px solid gray;
+      }
+      #sourceList .ui-selected, #destinationList .ui-selected {
+        background: forestgreen;
+        color: white;
+      }
+      button {
+        margin-top: 100px;
+      }
+    </style>
+</head>
+<body>
+
+<input type="text" title="Please provide your first name." id="tooltip"/>
+<br><br>
+<input type="text" id="datePicker"/>
+<br><br>
+<input type="text" id="tags"/>
+<br><br>
+<input type="text" placeholder="Tell us your name"/>
+<br><br>
+
+<div>
+  <ul id="sourceList">
+    <li class="ui-widget-content">Item 1</li>
+    <li class="ui-widget-content">Item 2</li>
+    <li class="ui-widget-content">Item 3</li>
+    <li class="ui-widget-content">Item 4</li>
+    <li class="ui-widget-content">Item 5</li>
+    <li class="ui-widget-content">Item 6</li>
+    <li class="ui-widget-content">Item 7</li>
+  </ul>
+
+  <button id="toRight"> > </button>
+  <button id="toLeft"> < </button>
+
+  <ul id="destinationList">
+    <li class="ui-widget-content">Item 8</li>
+  </ul>
+</div>
+
+<input type="button" id="del" value="Delete Item"/>
+
+<div>
+  <ul id="source">
+    <li>Movie 1</li>
+    <li>Movie 2</li>
+    <li>Movie 3</li>
+    <li>Movie 4</li>
+    <li>Movie 5</li>
+  </ul>
+
+  <ul id="dest">
+    <li>Movie 5</li>
+  </ul>
+</div>
+</body>
+</html>

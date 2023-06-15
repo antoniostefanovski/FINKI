@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 2 - Zadacha 4</title>
+    <script type="text/javascript">
+
+        function addComplex() {
+
+            let num1R = document.getElementById("firstOfComplex1");
+            let num1I = document.getElementById("secondOfComplex1");
+            let num2R = document.getElementById("firstOfComplex2");
+            let num2I = document.getElementById("secondOfComplex2");
+            let rezR = document.getElementById("rezR");
+            let rezI = document.getElementById("rezI");
+            rezR.value = parseInt(num1R.value) + parseInt(num2R.value);
+            rezI.value = parseInt(num1I.value) + parseInt(num2I.value);
+
+        }
+
+
+    </script>
+</head>
+<body>
+<input type="number" id="firstOfComplex1"/>
+<input type="number" id="secondOfComplex1"/><i>i</i>
+<br>
+<input type="number" id="firstOfComplex2"/>
+<input type="number" id="secondOfComplex2"/><i>i</i>
+<br>
+<button onclick="addComplex()">Add</button>
+<br>
+<input type="number" id="rezR"/>
+<input type="number" id="rezI"/><i>i</i>
+</body>
+</html>

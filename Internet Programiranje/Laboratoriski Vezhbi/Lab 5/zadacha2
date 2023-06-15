@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <script>
+  </script>
+</head>
+<body>
+<div>
+  <div style="text-align:right; float:left">
+    <label id="obid">Обиди <span id="obidi">0</span></label>
+    <p>Погодок: <input id="guess" style="width:150px"/></p>
+    <button id="pogodi" onclick="pogodi()">Погоди</button>
+    <button onclick="retry()">Од почеток</button>
+  </div>
+</div>
+<br/>
+<div id="prikaz" style="clear: both">
+</div>
+</body>
+
+<script rel="script" type="application/javascript">
+  function pogodi(){
+    var guess = document.getElementById('guess').value;
+
+    var naTochnaPozicija = 0, tochnaBrojka = 0;
+    var temp = randomNumber.toString();
+
+    for (i=0; i<4; i++){
+      if(temp[i]===guess[i])
+        naTochnaPozicija++;
+    }
+
+    for (i=0; i<4; i++){
+      for (j=0; j<4; j++){
+        if(temp[i]===guess[j])
+          tochnaBrojka++;
+      }
+    }
+
+    if(naTochnaPozicija<4) {
+      document.getElementById('prikaz').innerHTML +=
+              `Има ${tochnaBrojka - naTochnaPozicija}, на точно место има ${naTochnaPozicija}, последен погодок е ${guess} <br>`;
+
+      obidi = document.getElementById('obidi').innerHTML;
+      obidi = parseInt(obidi);
+
+      if(obidi===9){
+        document.getElementById('prikaz').innerText+=
+                `Не успеавте да погодите од 10 обиди, бројот што се бараше е ${randomNumber}`;
+
+        obidi++;
+        document.getElementById('obidi').innerHTML = obidi;
+
+        document.getElementById('pogodi').disabled = true;
+        return;
+      }
+
+      obidi++;
+      document.getElementById('obidi').innerHTML = obidi;
+      document.getElementById('guess').value = "";
+    }
+    else{
+      document.getElementById('pogodi').disabled = true;
+      document.getElementById('prikaz').innerHTML+=
+              'ПОГОДОК!!!';
+    }
+
+  }
+
+  var randomNumber;
+  function retry(){
+    randomNumber = Math.random();
+    randomNumber = Math.floor(randomNumber *(9999-1000) +1000);
+    document.getElementById('prikaz').innerHTML = " ";
+    document.getElementById('pogodi').disabled = false;
+    document.getElementById('obidi').innerText = "0";
+  }
+
+  window.onload = function (){
+    retry()
+  }
+
+</script>
+
+</html>

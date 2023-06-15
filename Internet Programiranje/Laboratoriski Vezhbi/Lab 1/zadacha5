@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab1 - Zadacha 5</title>
+</head>
+<body>
+    <pre id="evenOdd"></pre>
+    <script type="text/javascript">
+
+        let result = document.getElementById("evenOdd");
+
+        for(let i=0; i<=30; i++) {
+           result.innerHTML += i + " e " + (i%2 == 0 ? " paren " : " neparen ") + " broj";
+           result.innerHTML += "\n";
+        }
+
+
+    </script>
+</body>
+</html>

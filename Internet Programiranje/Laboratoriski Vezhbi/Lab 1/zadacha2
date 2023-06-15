@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab1 - Zadacha 2</title>
+</head>
+<body>
+    <h1 id="numberPrint"></h1>
+    <script type="text/javascript">
+
+        let result = document.getElementById("numberPrint");
+        let a = prompt("Vnesi telefonski broj");
+        let telephoneNumber = [a.slice(0,3), a.slice(3,6), a.slice(6)];
+        let telephoneOperator = "";
+        if(telephoneNumber[0] === '070' || telephoneNumber[0] === '071' || telephoneNumber[0] === '072') telephoneOperator = "T-Mobile(Telekom)";
+        if(telephoneNumber[0] === '075' || telephoneNumber[0] === '076' || telephoneNumber[0] === '077') telephoneOperator = "A1 Macedonia";
+        if(telephoneNumber[0] === '074') telephoneOperator = "Telekabel";
+
+        if(telephoneOperator === '') {
+            result.innerHTML = "Nevaliden input";
+        }
+        else {
+            result.innerHTML = telephoneNumber[0]+'/'+telephoneNumber[1]+'-'+telephoneNumber[2]+" "+telephoneOperator;
+        }
+
+
+
+    </script>
+</body>
+</html>

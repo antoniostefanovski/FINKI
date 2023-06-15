@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 3 - Zadacha 4</title>
+
+    <script type="text/javascript">
+
+      let books = [
+        {
+          title: 'Godfather',
+          author: 'Mario Puzo',
+          alreadyRead: true
+        },
+        {
+          title: 'Cumulative Effect',
+          author: 'Daren Hardy',
+          alreadyRead: true
+        },
+        {
+          title: 'The Hobbit',
+          author: 'J.R.R Tolkien',
+          alreadyRead: false
+        },
+        {
+          title: 'The Lord of the Rings',
+          author: 'J.R.R Tolkien',
+          alreadyRead: false
+        }
+      ];
+
+      let answer = book => book.alreadyRead ? `You already read "${book.title}" by ${book.author}` : `You still need to read "${book.title}" by ${book.author}`;
+
+      books.forEach(i => console.log(`${i.title} from ${i.author}\n ${answer(i)}`));
+
+      for(i of books) {
+          console.log(`${answer(i)}\n`);
+      }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
