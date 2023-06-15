@@ -1,0 +1,25 @@
+﻿@model LABS3.Models.AddUserToRoleModel
+@{
+    ViewBag.Title = "AddUserToRole";
+}
+
+<h2>Add User Role To Role</h2>
+
+@using (Html.BeginForm("AddUserToRole", "Account"))
+{
+    <div class="form-control">
+        @Html.Label("Email")
+
+    </div>
+
+    <div class="form-control">
+        @Html.TextBoxFor(a => a.Email)
+    </div>
+
+    <div class="form-control">
+        @Html.DropDownListFor(a => a.SelectedRole, new SelectList(Model.Roles))
+    </div>
+
+    <button type="submit" class="btn btn-success">Add Role</button>
+}
+
