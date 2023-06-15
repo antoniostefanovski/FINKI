@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script type='text/javascript'>
+
+        $(document).ready(function () {
+
+        })
+    </script>
+    <style>
+        .menu li a {
+            text-decoration: none;
+            color: black;
+        }
+        .tutorial {
+            float: left;
+            width: 300px;
+
+        }
+        .tutorial h2 {
+            background: red;
+            padding: 30px;
+        }
+        .menu {
+            height: 150px;
+            list-style-type: circle;
+            border-right: 2px solid black;
+        }
+        body > div:nth-child(4) > div:nth-child(2) > ul {
+            border-right: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Titled Section</h1>
+
+    <div class="tutorial">
+        <div>
+            <h2>Options</h2>
+        </div>
+        <div>
+            <ul class="menu">
+                <li><a href="#">disabled</a>
+                </li>
+                <li><a href="#">icons</a>
+                </li>
+                <li><a href="#">items</a>
+                </li>
+                <li><a href="#">menus</a>
+                </li>
+                <li><a href="#">position</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="tutorial">
+        <div>
+            <h2>Methods</h2>
+        </div>
+        <div>
+            <ul class="menu">
+                <li><a href="#">blur</a>
+                </li>
+                <li><a href="#">collapsed</a>
+                </li>
+                <li><a href="#">collapseAll</a>
+                </li>
+                <li><a href="#">destroy</a>
+                </li>
+                <li><a href="#">disable</a>
+                </li>
+                <li><a href="#">previous</a>
+                </li>
+                <li><a href="#">next</a>
+                </li>
+                <li><a href="#">select</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="tutorial">
+        <div>
+            <h2>Events</h2>
+        </div>
+        <div>
+            <ul class="menu">
+                <li><a href="#">blur</a>
+                </li>
+                <li><a href="#">create</a>
+                </li>
+                <li><a href="#">focus</a>
+                </li>
+                <li><a href="#">select</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

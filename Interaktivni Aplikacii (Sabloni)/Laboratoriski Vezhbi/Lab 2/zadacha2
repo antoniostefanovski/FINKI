@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="jquery/jquery-ui.css">
+    <script src="jquery/jquery.js"></script>
+    <script src="jquery/jquery-ui.js"></script>
+    <title>Lab 2 - Zadacha 2</title>
+    <link rel="stylesheet" href="style.css">
+    <script type='text/javascript'>
+
+        $(document).ready(function () {
+
+        })
+    </script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            width: 100%;
+            margin-top: -16px;
+            background: #333333;
+        }
+        #menu {
+            list-style-type: none;
+            text-align: center;
+        }
+        #menu li {
+            display: inline-block;
+            margin-right: 10px;
+            text-align: center;
+            padding: 20px;
+            font-size: 1.15rem;
+        }
+        #menu a {
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div>
+    <ul id="menu">
+        <li><a href="#">Food and Drink</a></li>
+        <li><a href="#">Electronics</a></li>
+        <li><a href="#">Home and Garden</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    </div>
+
+</body>
+</html>

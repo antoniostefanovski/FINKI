@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 1 - Zadacha 3</title>
+    <script src="../jquery/jquery.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            $("td:first-child, td:last-child").addClass("border");
+            $("tr:even").addClass("boja");
+
+        })
+
+
+    </script>
+    <style>
+        .boja {
+            font-weight:
+                    bold; color: #FF0000;
+        }
+        .border {
+            background-color: #ccc;
+        }
+    </style>
+
+</head>
+<body>
+<table id="tabela">
+    <tr>
+        <td>Регистарски таблички</td>
+        <td>Маркa</td>
+        <td>Боја</td>
+    </tr>
+    <tr>
+        <td>SK-9000-AC</td>
+        <td>Alfa Romeo</td>
+        <td>црна</td>
+    </tr>
+    <tr>
+        <td>VE-8000-AB</td>
+        <td>Toyota Yaris</td>
+        <td>бела</td>
+    </tr>
+    <tr>
+        <td>KO-7000-AD</td>
+        <td>Renault Meganne</td>
+        <td>црна</td>
+    </tr>
+    <tr>
+        <td>PP-6000-AC</td>
+        <td>Mercedes</td>
+        <td>црвена</td>
+    </tr>
+    <tr>
+        <td>BT-5000-AB</td>
+        <td>BMW</td>
+        <td>сива</td>
+    </tr>
+    <tr>
+        <td>SN-4000-AC</td>
+        <td>Peugeot</td>
+        <td>жолта</td>
+    </tr>
+</table>
+</body>
+</html>

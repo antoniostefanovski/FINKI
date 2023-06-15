@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="jquery/jquery-ui.css">
+    <script src="jquery/jquery.js"></script>
+    <script src="jquery/jquery-ui.js"></script>
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script type='text/javascript'>
+
+        $(document).ready(function () {
+            $("#accordion").accordion({
+                header: "h3",
+                collapsible: true,
+                animated: "slide"
+            } );
+        })
+    </script>
+    <style>
+
+    </style>
+
+</head>
+<body>
+<body>
+<div id="accordion">
+    <div>
+        <h3 id="header1"><a href="#">First</a></h3>
+        <div>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+            amet.</div>
+    </div>
+    <div>
+        <h3 id="header2"><a href="#">Second</a></h3>
+        <div>Phasellus mattis tincidunt nibh.</div>
+    </div>
+    <div>
+        <h3 id="header3"><a href="#">Third</a></h3>
+        <div>Nam dui erat, auctor a, dignissim quis.</div>
+    </div>
+</div>
+</body>
+</html>
+
+</body>
+</html>

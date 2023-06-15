@@ -1,0 +1,147 @@
+<html>
+    <head>
+        <title>Kolokvium 1</title>
+        <style>
+            body, html {
+                margin:0;
+                padding:0;
+            }
+            nav {
+                display: block;
+                text-align: center;
+                padding:15px 0px;
+
+            }
+            nav ul {
+                display: block;
+                margin:0;
+                padding:0;
+                list-style:none;
+                text-align:center;
+            }
+            nav ul li {
+                display:inline-block;
+                background: #f9f9f9;
+            }
+            nav ul li a {
+                display: block;
+                font-size:18px;
+                color: #000;
+                text-decoration: none;
+                font-font:sans-serif;
+                padding:5px 15px;
+            }
+            nav ul li a:hover,
+            nav ul li a:focus {
+                color:#0000FF;
+                text-decoration: underline;
+            }
+            .collapsable-panels {
+                display:block;
+                width:200px;
+                margin:40px;
+            }
+            .collapse {
+                display: block;
+                margin-bottom:5px;
+                border:1px solid #eee;
+            }
+            .collapse .title {
+                display: block;
+                font-size:14px;
+                font-weight:bold;
+                padding:5px;
+                font-family: sans-serif;
+                cursor: pointer;
+            }
+            .collapse .title:hover {
+                background: #f9f9f9;
+            }
+            .collapse .data {
+                display: none;
+                padding:5px;
+                background: #f1f1f1;
+            }
+            .collapse .data b {
+                display:block;
+                font-weight: normal;
+                font-size:14px;
+                margin-top:10px;
+            }
+            .collapse .data ul {
+                margin:0;
+                padding:0;
+                list-style: none;
+            }
+        </style>
+        <script src="jquery/jquery.js" type="application/javascript"></script>
+    </head>
+    <body>
+
+        <nav>
+            <ul>
+                <li><a href="compactdigitalcameras.html">Compact Digital Cameras</a></li>
+                <li><a href="dslrcameras.html">DSLR Cameras</a></li>
+                <li><a href="speedliteflashes.html">Speedlite Flashes</a></li>
+            </ul>
+        </nav>
+
+        <div class="collapsable-panels">
+            <div class="collapse">
+                <div class="title">Services & Apps</div>
+                <div class="data">
+                    <div class="collapse">
+                        <div class="title">Services</div>
+                        <div class="data">
+                            <ul>
+                                <li><a href="#">irista</a></li>
+                                <li><a href="#">Lifecake</a></li>
+                                <li><a href="#">Photo Books</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="collapse">
+                        <div class="title">Apps</div>
+                        <div class="data">
+                            <ul>
+                                <li><a href="#">Camera Connect</a></li>
+                                <li><a href="#">EOS Remote</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="collapse">
+                <div class="title">Get Inspired</div>
+                <div class="data">
+                    <ul>
+                        <li><a href="#">Stories</a></li>
+                        <li><a href="#">Techniques</a></li>
+                        <li><a href="#">Canon Connectivity</a></li>
+                        <li><a href="#">Showcase</a></li>
+                        <li><a href="#">Gallery</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="collapse">
+                <div class="title">Support</div>
+                <div class="data">
+                    <ul>
+                        <li><a href="#">Drivers</a></li>
+                        <li><a href="#">Software</a></li>
+                        <li><a href="#">Manuals</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            $(document).ready(function() {
+                $(".collapse .title").click(function(e) {
+                    $(this).siblings(".data").slideToggle(200);
+                })
+            })
+        </script>
+    </body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 3 - Zadacha 2</title>
+    <link rel="stylesheet" href="jquery/jquery-ui.css">
+    <script src="jquery/jquery.js"></script>
+    <script src="jquery/jquery-ui.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.title').click(function () {
+                $('.text').slideUp('slow');
+                $(this).next('.text').slideToggle('slow');
+                $('.title').removeClass('plus');
+                $(this).addClass('plus');
+
+            });
+
+            $('.menu li').click(function () {
+                var res = "";
+                var als = $(this).text();
+                for (var i = 0; i < 10; i++) {
+                    res += i + als;
+                }
+
+                $('#main-desc span i').text(res);
+            });
+        });
+    </script>
+    <style>
+        #dopolnitelno{
+            width: 40%;
+            height: auto;
+            margin: 100px auto;
+            background-color: pink;
+            border: 1px solid black;
+            margin-top: 100px;
+        }
+        .main{
+            width: 99%;
+            margin: 3px;
+        }
+        .title{
+            background-color: #c5e7ff;
+            font-style: italic;
+            border: 1px solid black;
+            font-size: 18px;
+            padding: 2px;
+
+        }
+        .text{
+            background-color: #ffd5c2;
+            padding: 3px;
+            border: 1px solid black;
+            display: none;
+        }
+        .plus{
+            font-weight: bolder;
+            background-color: #ffd5c2;
+        }
+
+        #main-content{
+            border: 1px solid red;
+            width: 70%;
+            margin: 20px;
+            height: 300px;
+        }
+
+        #main-content .menu{
+            display: block;
+            background-color: lightblue;
+            width: 22%;
+            float: left;
+            height: 180px;
+            margin: 5px;
+        }
+
+        .menu span{
+            font-size: 22px;
+            text-align: center;
+            margin-left: 40px;
+            width: 90%;
+        }
+
+        ol{
+            list-style-type: none;
+        }
+        ol li{
+            padding: 2px;
+            margin: 1px;
+            cursor: pointer;
+            border-left: 2px solid #1E5799;
+        }
+
+        ol li:hover{
+            color: #1E5799;
+        }
+
+        #main-desc{
+            border: 1px dashed yellow;
+            width: 90%;
+            margin: 20px 10px;
+            padding: 20px 10px;
+            background-color: tomato;
+            display: block;
+            float: left;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+<div id='main-content'>
+    <div class='menu'>
+        <span>Медицина</span>
+        <ol>
+            <li>MedIm</li>
+            <li>MedIA</li>
+            <li>FINKI-Med</li>
+        </ol>
+    </div>
+    <div class='menu'>
+        <span>Образование</span>
+        <ol>
+            <li>FINKI-Edu</li>
+            <li>Edu-Buddy</li>
+            <li>FFINKI-LE</li>
+            <li>FFINKI-Math</li>
+        </ol>
+    </div>
+    <div class='menu'>
+        <span>Сметководство</span>
+        <ol>
+            <li>eTax</li>
+            <li>FINKI-Tax</li>
+            <li>Tax-All</li>
+            <li>MySalary</li>
+        </ol>
+    </div>
+    <div class='menu'>
+        <span>Игри</span>
+        <ol>
+            <li>Grelima</li>
+            <li>FINKI-game</li>
+            <li>Edaolith</li>
+            <li>Foessa</li>
+            <li>Jeroen</li>
+        </ol>
+    </div>
+
+    <div id='main-desc'>
+        <span><i>Here goes the description...</i></span>
+    </div>
+
+</div>
+
+
+
+
+<div id='dopolnitelno'>
+
+    <div class='main'>
+        <div class='title'>Тим</div>
+        <div class='text'>
+            <ul>
+                <li>Алберт Ајнштајн</li>
+                <li>Ален Тјуринг</li>
+                <li>Архимед</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class='main'>
+        <div class='title'>Претставништва</div>
+        <div class='text'>
+            <ul>
+                <li>Скопје</li>
+                <li>Прилеп</li>
+                <li>Велес</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class='main'>
+        <div  class='title'>Контакт</div>
+        <div class='text'>
+            <ul>
+                <li>Ул. Есенска 24/5 1000 Скопје</li>
+                <li>+38921234567</li>
+                <li>finkiit@iaispit.com</li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>

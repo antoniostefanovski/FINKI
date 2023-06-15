@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 4 - Zadacha 1</title>
+    <link rel="stylesheet" href="jquery/jquery-ui.css">
+    <script src="jquery/jquery.js"></script>
+    <script src="jquery/jquery-ui.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(document).tooltip({
+                content: "ИМЕ",
+                tooltipClass: "ui-tooltip arrow arrow.top arrow.left arrow.right arrow:after arrow.top:after",
+            });
+            $("#effect").on("change", function() {
+                var selectedOption = $(this).val();
+                $(document).tooltip("option", "show", { effect: selectedOption, duration: 250 });
+                $(document).tooltip("option", "hide", { effect: selectedOption, duration: 250 });
+            });
+        })
+
+    </script>
+    <style>
+        .ui-tooltip, .arrow:after {
+            background: black;
+            border: 2px solid white;
+        }
+        .ui-tooltip {
+            padding: 10px 20px;
+            color: white;
+            border-radius: 20px;
+            font: bold 14px "Helvetica Neue", Sans-Serif;
+            text-transform: uppercase;
+            box-shadow: 0 0 7px black;
+        }
+        .arrow {
+            width: 70px;
+            height: 16px;
+            overflow: hidden;
+            position: absolute;
+            left: 50%;
+            margin-left: -35px;
+            bottom: -16px;
+        }
+        .arrow.top {
+            top: -16px;
+            bottom: auto;
+        }
+        .arrow.left {
+            left: 20%;
+        }
+        .arrow:after {
+            content: "";
+            position: absolute;
+            left: 20px;
+            top: -20px;
+            width: 25px;
+            height: 25px;
+            box-shadow: 6px 5px 9px -9px black;
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            tranform: rotate(45deg);
+        }
+        .arrow.top:after {
+            bottom: -20px;
+            top: auto;
+        }
+    </style>
+</head>
+<body>
+<div style="width:400px; margin:100px auto;">
+    <select id="effect">
+        <option value="blind">Blind</option>
+        <option value="bounce">Bounce</option>
+        <option value="clip">Clip</option>
+        <option value="drop">Drop</option>
+        <option value="explode">Explode</option>
+        <option value="fade">Fade</option>
+        <option value="fold">Fold</option>
+        <option value="highlight">Highlight</option>
+        <option value="puff">Puff</option>
+        <option value="pulsate">Pulsate</option>
+        <option value="scale">Scale</option>
+        <option value="shake">Shake</option>
+        <option value="size">Size</option>
+        <option value="slide">Slide</option>
+        <option value="transfer">Transfer</option>
+        <option value="myAnimation">My animation</option>
+    </select>
+    <br/><br/>
+    <div style="width:100px">Име:</div><input id="ime" title="ИМЕ" style="width:200px"/>
+
+</div>
+</body>
+</html>

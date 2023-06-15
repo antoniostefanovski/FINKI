@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="jquery/jquery-ui.css">
+    <script src="jquery/jquery.js"></script>
+    <script src="jquery/jquery-ui.js"></script>
+    <title>Lab 2 - Zadacha 3</title>
+    <link rel="stylesheet" href="style.css">
+    <script type='text/javascript'>
+
+        $(document).ready(function () {
+            $("#temporaryHidden1, #temporaryHidden2, #temporaryHidden3").hide();
+            $( "#dialog" ).dialog({
+                autoOpen: false,
+                modal: true,
+                buttons: {
+                    Proceed: function(){
+                        $("#title").html($("#input-name").val());
+                        $("#author").html($("#input-author").val());
+                        $("#comment").html($("#input-comment").val());
+                        $("#temporaryHidden1, #temporaryHidden2, #temporaryHidden3").show();
+                        //validation here
+                        $( "#dialog" ).dialog("close");
+                    }
+                }
+            });
+
+            $("#book").click(function(){
+                $( "#dialog" ).dialog("open");
+            });
+        })
+    </script>
+    <style>
+        #temporaryHidden1, #temporaryHidden2, #temporaryHidden3 {
+            display: inline;
+            border: 1px solid black;
+        }
+        #title, #author, #comment {
+            color: darkred;
+        }
+    </style>
+
+</head>
+<body>
+
+<button id="book">Add Book</button>
+
+<br><br><br>
+
+<h3 id="temporaryHidden1">Title:</h3>
+<h3 id="title"></h3>
+<h4 id="temporaryHidden2">Author:</h4>
+<h4 id="author"></h4>
+<h4 id="temporaryHidden3">Review(comment):</h4>
+<h4 id="comment"></h4>
+
+<div id="dialog" title="Add a book">
+    <p>Book's name:</p>
+    <input id="input-name" type="text"/>
+    <p>Book's author:</p>
+    <input id="input-author" type="text"/>
+    <p>Thoughts you wanna share:</p>
+    <input id="input-comment" type="text"/>
+</div>
+
+</body>
+</html>

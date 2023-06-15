@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 1 - Zadacha 2</title>
+
+    <script type="text/javascript">
+
+        function inputEmpty() {
+            let gender = document.getElementsByName('gender');
+            let counter = 0;
+            for(let i=0; i<gender.length; i++) {
+                if(gender[i].checked !== false)
+                    counter++;
+            }
+            return counter === gender.length;
+        }
+
+        function displayRadioValue() {
+            let gender = document.getElementsByName('gender');
+
+            for(i = 0; i < gender.length; i++) {
+                if(gender[i].checked)
+                    return gender[i].value;
+            }
+        }
+
+        function apply() {
+            let name = document.getElementById('name');
+            let alias = document.getElementById('alias');
+            let gender = document.getElementsByName('gender');
+            let genre = document.getElementById('genre');
+
+            if(name.value === "" || alias.value === "" || inputEmpty() || genre.value === "") {
+                alert("Сите полиња се задолжителни");
+            }
+            else {
+                alert(name.value + ", "+displayRadioValue()+", "+genre.value+" - Успешно се пријавивте");
+            }
+        }
+
+    </script>
+
+    <style>
+        form {
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <h1>Форма за пријавување на X-Factor</h1>
+    <div id="inputs">
+
+        <label>Име</label>
+        <input type="text" id="name"><br><br>
+
+        <label>Уметничко име</label>
+        <input type="text" id="alias"><br><br>
+
+        <label>Пол</label>
+        <form>
+            <input type="radio" name="gender" value="машки"><label>Машки</label>
+            <input type="radio" name="gender" value="женски"><label>Женски</label>
+        </form><br><br>
+
+        <label>Жанр</label>
+        <select id="genre">
+            <option></option>
+            <option>Classical Music</option>
+            <option>Rock</option>
+            <option>Metal</option>
+            <option>Pop</option>
+        </select>
+
+    </div>
+
+</div>
+<br>
+<button onclick="apply()">Пријави се</button>
+
+</body>
+</html>
