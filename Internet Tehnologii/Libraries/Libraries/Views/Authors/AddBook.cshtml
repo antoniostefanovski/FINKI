@@ -1,0 +1,22 @@
+﻿@model Libraries.Models.AuthorBook
+@{
+    ViewBag.Title = "AddBook";
+}
+
+<h2>Add Book</h2>
+
+@using (Html.BeginForm("AddBook", "Authors")) { 
+
+    <div class="form-group">
+
+        @Html.Label("Choose Book")
+        @Html.DropDownListFor(b => b.BookId, new SelectList(Model.Books, "Id", "Title"), new { @class="form-control" })
+
+        @Html.HiddenFor(a => a.AuthorId)
+
+    </div>
+
+    <button type="submit" class="btn btn-outline-primary">Add Book</button>
+
+}
+
