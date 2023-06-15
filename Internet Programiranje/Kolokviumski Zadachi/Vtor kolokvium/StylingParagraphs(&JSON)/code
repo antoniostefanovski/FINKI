@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Vezhba 10</title>
+    <title>Vezhba 10 - Modified</title>
 </head>
 <body>
 <p id="pToModify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin at lectus maximus, condimentum velit at, dapibus nisl. Mauris imperdiet, libero non blandit viverra, metus augue dignissim arcu, id accumsan sapien erat nec risus. Nulla facilisi. Aliquam et turpis ipsum. Ut augue nisi, venenatis a quam vel, vestibulum convallis ligula. Nullam molestie quam ac mauris molestie, sit amet imperdiet augue dictum. Curabitur non cursus felis. Suspendisse pulvinar nisi mauris, vel tempor orci condimentum sed. In fringilla, ipsum sit amet eleifend lobortis, quam lacus euismod lacus, ac malesuada justo justo ut ex. Pellentesque sagittis libero ac odio semper, nec aliquam quam euismod. Cras tristique lacus vitae ipsum sollicitudin cursus. </p>
@@ -23,18 +23,16 @@
   data = JSON.parse(data);
 
   for(let i=0; i<data.length; i++) {
-    let colorOption = document.createElement('option');
-    colorOption.value = data[0].options[i];
-    colorOption.text = data[0].options[i];
-    document.getElementById('color').add(colorOption);
-    let widthOption = document.createElement('option');
-    widthOption.value = data[1].options[i];
-    widthOption.text = data[1].options[i];
-    document.getElementById('width').add(widthOption);
-    let bgOption = document.createElement('option');
-    bgOption.value = data[2].options[i];
-    bgOption.text = data[2].options[i];
-    document.getElementById('background-color').add(bgOption);
+        let optionGroup = data[i];
+        let selectElement = document.getElementById(optionGroup.name);
+
+        for(let j=0; j<optionGroup.options.length; j++) {
+            let option = document.createElement('option');
+            option.value = optionGroup.options[j];
+            option.text = optionGroup.options[j];
+            selectElement.add(option);
+        }
+
   }
 
   document.getElementById('color').addEventListener("change", function () {
