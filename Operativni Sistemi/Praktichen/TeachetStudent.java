@@ -1,6 +1,6 @@
 import java.util.concurrent.Semaphore;
 
-public class TestOkolina {
+public class TeachetStudent {
 
     public static int NUM_RUN = 50;
 
